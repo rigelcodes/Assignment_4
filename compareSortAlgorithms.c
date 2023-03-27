@@ -74,8 +74,9 @@ void mergeSort(int pData[], int l, int r)
 
 		merge(pData, l, m, r);
 
-		// allocated memory updated for merge function
-		extraMemoryAllocated += (r - l + 1) * sizeof(int) / 4;
+		// allocated memory (bytes) updated for merge function
+		extraMemoryAllocated += (r - l + 1) * sizeof(int);
+		// to get amount of integers, use: extraMemoryAllocated += (r - l + 1) * sizeof(int) / 4;
 	}
 }
 
